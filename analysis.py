@@ -26,3 +26,13 @@ df['Post_Date'] = pd.to_datetime(df['Post_Date'])
 # Count the number of posts per platform
 # This calculates how many posts exist for each social media platform.
 platform_counts = df['Platform'].value_counts()
+
+# Plot the number of posts per platform
+# This visualization helps to see which platform has the most or least posts.
+plt.figure(figsize=(10, 6))
+sns.barplot(x=platform_counts.index, y=platform_counts.values)
+plt.title("Number of Posts per Platform")
+plt.xlabel("Platform")
+plt.ylabel("Number of Posts")
+plt.xticks(rotation=45)  # Rotates labels for better readability
+plt.show()
