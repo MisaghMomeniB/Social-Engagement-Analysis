@@ -22,3 +22,7 @@ print(df.head())
 # Convert 'Post_Date' column to datetime format
 # This ensures that date-related operations (like sorting, filtering) work correctly.
 df['Post_Date'] = pd.to_datetime(df['Post_Date'])
+
+# Count the number of posts per platform
+# This calculates how many posts exist for each social media platform.
+platform_counts = df['Platform'].value_counts()
