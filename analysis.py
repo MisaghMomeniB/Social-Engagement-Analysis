@@ -36,3 +36,7 @@ plt.xlabel("Platform")
 plt.ylabel("Number of Posts")
 plt.xticks(rotation=45)  # Rotates labels for better readability
 plt.show()
+
+# Calculate average engagement metrics per platform
+# This groups data by platform and calculates the average likes, comments, shares, and views.
+platform_engagement = df.groupby('Platform')[['Likes', 'Comments', 'Shares', 'Views']].mean().reset_index()
