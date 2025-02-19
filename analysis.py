@@ -48,3 +48,10 @@ sns.barplot(x="Platform", y="Likes", data=platform_engagement, color="blue", lab
 sns.barplot(x="Platform", y="Comments", data=platform_engagement, color="red", label="Comments", alpha=0.7)
 sns.barplot(x="Platform", y="Shares", data=platform_engagement, color="green", label="Shares", alpha=0.5)
 sns.barplot(x="Platform", y="Views", data=platform_engagement, color="orange", label="Views", alpha=0.3)
+
+plt.title("Average Engagement per Platform")
+plt.xlabel("Platform")
+plt.ylabel("Average Count")
+plt.legend()
+plt.xticks(rotation=45)  # Rotates labels for better readability
+plt.show()
