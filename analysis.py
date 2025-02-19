@@ -10,3 +10,7 @@ df = pd.read_csv(file_path)
 # Display basic information about the dataset
 # This shows the number of rows, columns, data types, and non-null values for each column.
 print(df.info())
+
+# Display summary statistics of numerical columns
+# This gives insights like mean, min, max, and percentiles of numerical data.
+print(df.describe())
