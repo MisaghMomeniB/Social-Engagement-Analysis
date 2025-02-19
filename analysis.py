@@ -40,3 +40,11 @@ plt.show()
 # Calculate average engagement metrics per platform
 # This groups data by platform and calculates the average likes, comments, shares, and views.
 platform_engagement = df.groupby('Platform')[['Likes', 'Comments', 'Shares', 'Views']].mean().reset_index()
+
+# Plot engagement metrics per platform
+# This visualization compares how different platforms perform in terms of engagement.
+plt.figure(figsize=(12, 6))
+sns.barplot(x="Platform", y="Likes", data=platform_engagement, color="blue", label="Likes")
+sns.barplot(x="Platform", y="Comments", data=platform_engagement, color="red", label="Comments", alpha=0.7)
+sns.barplot(x="Platform", y="Shares", data=platform_engagement, color="green", label="Shares", alpha=0.5)
+sns.barplot(x="Platform", y="Views", data=platform_engagement, color="orange", label="Views", alpha=0.3)
