@@ -18,3 +18,7 @@ print(df.describe())
 # Display the first five rows of the dataset
 # This helps to understand the structure and content of the data.
 print(df.head())
+
+# Convert 'Post_Date' column to datetime format
+# This ensures that date-related operations (like sorting, filtering) work correctly.
+df['Post_Date'] = pd.to_datetime(df['Post_Date'])
