@@ -14,3 +14,7 @@ print(df.info())
 # Display summary statistics of numerical columns
 # This gives insights like mean, min, max, and percentiles of numerical data.
 print(df.describe())
+
+# Display the first five rows of the dataset
+# This helps to understand the structure and content of the data.
+print(df.head())
